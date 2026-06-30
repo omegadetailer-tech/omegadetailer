@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --omega-red: #E63329;
-  --omega-dark: #0A0A0A;
-}
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -21,20 +16,69 @@ body {
   letter-spacing: -0.02em;
 }
 
-@layer components {
-  .btn-primary {
-    @apply inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-red-600/30;
-  }
-  .btn-ghost {
-    @apply inline-flex items-center gap-2 border border-white/20 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg transition-all;
-  }
-  .section-tag {
-    @apply text-red-500 font-bold text-xs tracking-widest uppercase mb-3 block;
-  }
-  .section-title {
-    @apply font-display text-4xl md:text-5xl font-black text-white mb-4;
-  }
-  .card {
-    @apply bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 hover:bg-white/8 transition-all;
-  }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #dc2626;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); }
+
+.section-tag {
+  display: block;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(239,68,68,0.4);
+  background: rgba(255,255,255,0.08);
 }
